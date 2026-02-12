@@ -138,8 +138,12 @@ notebooks/
 
 1. Open: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/greentree327/brain-to-text-mamba-decoder/blob/main/notebooks/inference_colab.ipynb)
 2. Runtime → Change runtime type → **GPU (A100 recommended)**
-3. Run all cells (credentials will be prompted)
-4. Outputs: `submission_colab.csv` with predictions
+3. Set up Colab Secrets (one-time):
+   - Click 🔑 icon (Secrets) in left sidebar
+   - Add: `KAGGLE_USERNAME`, `KAGGLE_KEY`, `HF_TOKEN`
+   - Enable "Notebook access" for each
+4. Run all cells
+5. Outputs: `submission_colab.csv` with predictions
 
 ### Required Credentials
 

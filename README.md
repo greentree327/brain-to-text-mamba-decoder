@@ -27,7 +27,7 @@ Unlike top-heavy solutions relying on massive 5-gram language models (>300GB RAM
 
 - **Memory Optimization**: Compact footprint vs. 300GB baseline  
 - **Hybrid Architecture**: Mamba (state-space models) + GRU (recurrent networks)  
-- **Adaptive Inference**: Dynamic LLM gating reduces compute by ~40%  
+- **Adaptive Inference**: Dynamic LLM gating reduces compute overhead  
 - **Clinical-Grade**: Designed for real-time BCI hardware constraints  
 
 ---
@@ -63,7 +63,7 @@ else:
     strategy = 'greedy_decode'  # Skip expensive LLM
 ```
 
-**Result**: ~40% reduction in average inference latency
+**Result**: Reduced inference latency via adaptive gating
 
 ---
 
@@ -75,11 +75,24 @@ Run the complete pipeline on Google Colab with zero local setup:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/greentree327/brain-to-text-mamba-decoder/blob/main/notebooks/inference_colab.ipynb)
 
-**Features:**
-- ✅ Pre-configured GPU environment (T4/A100)
-- ✅ All dependencies installed automatically
-- ✅ Modularized code imported from `src/`
-- ✅ Credentials handled via secure prompts
+**Setup** (one-time, before first run):
+
+1. **Get API credentials**:
+   - **Kaggle**: https://www.kaggle.com/settings → "Create New Token" → Save username + key
+   - **HuggingFace**: https://huggingface.co/settings/tokens → "New token" (read access)
+
+2. **Add to Colab Secrets** (stores credentials securely):
+   - In Colab: Click 🔑 icon (left sidebar) → "Secrets"
+   - Add secrets:
+     - `KAGGLE_USERNAME` = your Kaggle username
+     - `KAGGLE_KEY` = your Kaggle API key  
+     - `HF_TOKEN` = your HuggingFace token
+   - Enable "Notebook access" for each secret
+
+3. **Run the notebook**:
+   - Runtime → Change runtime type → Select **GPU**
+   - Runtime → Run all
+   - Credentials load automatically from secrets
 
 See [SUMMARY.md](SUMMARY.md) for technical implementation details.
 
