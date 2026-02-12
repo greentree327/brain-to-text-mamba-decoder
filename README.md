@@ -47,7 +47,19 @@ To save compute, we implemented a **Context-Aware Inference Pipeline (LISA)**:
 
 ---
 
-## 🛠️ Installation
+## � Quick Start (Google Colab - Recommended)
+
+**For the easiest setup**, run this solution on Google Colab where all dependencies work out-of-the-box:
+
+👉 **See [SUMMARY.md](SUMMARY.md) for complete Google Colab setup instructions**
+
+The Colab notebook uses our modularized `src/` code and requires no local installation!
+
+---
+
+## 🛠️ Local Installation (Advanced)
+
+If you prefer running locally:
 
 ```bash
 # Clone the repository

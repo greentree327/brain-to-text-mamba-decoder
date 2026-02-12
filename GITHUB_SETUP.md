@@ -34,11 +34,19 @@ git branch -M main
 git push -u origin main
 ```
 
+**Note:** If you get a "rejected" error because GitHub initialized with files, run:
+```powershell
+git pull origin main --allow-unrelated-histories
+git push -u origin main
+```
+
 ## Step 7: Update Colab Notebook
-After pushing, update [notebooks/inference_colab.ipynb](notebooks/inference_colab.ipynb) line 25:
+After pushing, update [notebooks/inference_colab.ipynb](notebooks/inference_colab.ipynb) Cell 3 (Clone Repository):
 ```python
 !git clone https://github.com/YOUR_USERNAME/brain-to-text-mamba-decoder.git
 ```
+
+Replace `YOUR_USERNAME` with your actual GitHub username (e.g., `greentree327`).
 
 ---
 
