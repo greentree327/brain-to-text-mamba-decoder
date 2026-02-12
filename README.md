@@ -9,8 +9,12 @@
 | **Inference Hardware** | Single NVIDIA A100 (40GB) |
 | **Architecture** | Hybrid SoftWindow Bi-Mamba + GRU + LISA Ensemble |
 
-![Leaderboard Ranking](image.jpg)
-*Fig 1. Final Private Leaderboard Standings (Team: DataMogger)*
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/73f3b2c6-217f-447d-ad70-b465f307948d" width="350" alt="7th Place Achievement Card">
+  <br>
+  <em>Fig 1. Final Results: <strong>Rank 7th out of 463 teams</strong> (Top 1.5%) in the Brain-to-Text '25 Challenge.</em>
+</p>
+
 
 ## 📖 Overview
 This repository contains the inference pipeline for our **7th Place Solution** in the [Kaggle Brain-to-Text 2025 Competition](https://www.kaggle.com/competitions/brain-to-text-25). 
