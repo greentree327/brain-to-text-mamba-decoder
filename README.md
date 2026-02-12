@@ -6,7 +6,7 @@
 | **Global Rank** | **7th / 500+** |
 | **Word Error Rate (WER)** | **0.029** (2.9%) |
 | **Model Size (RAM)** | **19GB** (Optimized down from ~300GB) |
-| **Inference Hardware** | Single NVIDIA A100 (40GB) |
+| **Inference Hardware** | Single NVIDIA A100 High-Ram (80GB) |
 | **Architecture** | Hybrid SoftWindow Bi-Mamba + GRU + LISA Ensemble |
 
 <p align="left">
