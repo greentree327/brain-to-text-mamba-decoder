@@ -51,7 +51,7 @@ Unlike top-heavy solutions relying on massive 5-gram language models (>300GB RAM
 **KenLM 4-gram** (Optimized vs. 300GB)
 - Custom-trained on Wiki + Switchboard + News corpus
 - Flashlight decoder with optimized trie compression
-- 98% perplexity retention with 15× memory reduction
+- 15× VRAM memory reduction
 
 ### 3. Dynamic Inference Pipeline (LISA)
 
