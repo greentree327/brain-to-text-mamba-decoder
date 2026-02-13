@@ -4,9 +4,7 @@
 | Metric | Performance |
 | :--- | :--- |
 | **Competition Rank** | **7th / 463 teams** (Top 1.5%) |
-| **Word Error Rate (WER)** | **0.026** (2.6%) |
-| **Model Size (RAM)** | Optimized (15× reduction from baseline) |
-| **Inference Hardware** | NVIDIA A100 (80GB) |
+| **Word Error Rate (WER)** | **0.02994** (2.9%, private LB) |
 | **Architecture** | Hybrid SoftWindow Bi-Mamba + GRU + LISA Ensemble |
 
 <p align="left">
@@ -19,16 +17,13 @@
 
 ## 📖 Overview
 
-This repository implements a production-ready brain-computer interface decoder that converts intracortical neural signals ( microelectrode array recordings) into natural language text. The solution achieved **7th place** in the [Kaggle Brain-to-Text 2025 Competition](https://www.kaggle.com/competitions/brain-to-text-25), ranking in the **top 1.5%** of 463 teams.
+This repository contains the original submission notebook for the [Kaggle Brain-to-Text 2025 Competition](https://www.kaggle.com/competitions/brain-to-text-25). The solution achieved **7th place** (top 1.5% of 463 teams).
 
-### Key Innovation
+### What This Repo Provides
 
-Unlike top-heavy solutions relying on massive 5-gram language models (>300GB RAM), this approach prioritizes **production viability** for clinical deployment:
-
-- **Memory Optimization**: Compact footprint vs. 300GB baseline  
-- **Hybrid Architecture**: Mamba (state-space models) + GRU (recurrent networks)  
-- **Adaptive Inference**: Dynamic LLM gating reduces compute overhead  
-- **Clinical-Grade**: Designed for real-time BCI hardware constraints  
+- **Original submission notebook** used for inference
+- **Colab-first workflow** with minimal setup
+- **Technical summary** in [SUMMARY.md](SUMMARY.md)
 
 ---
 
@@ -46,9 +41,9 @@ Unlike top-heavy solutions relying on massive 5-gram language models (>300GB RAM
 - Orthogonal weight initialization for training stability
 - Handles short-term acoustic feature extraction
 
-### 2. Memory-Optimized Language Model
+### 2. Novel Memory-Optimized n-gram Language Model
 
-**KenLM 4-gram** (Optimized vs. 300GB)
+**KenLM 4-gram** (14GB vs. 300GB 5-gram baseline)
 - Custom-trained on Wiki + Switchboard + News corpus
 - Flashlight decoder with optimized trie compression
 - 15× VRAM memory reduction
@@ -71,7 +66,7 @@ else:
 
 Run the complete pipeline on Google Colab with zero local setup:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/greentree327/brain-to-text-mamba-decoder/blob/main/brain_to_text_colab.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/greentree327/brain-to-text-mamba-decoder/blob/main/slightly_tidy_version_Mamba_GRU_LISA_Ensemble_with_TTA%20(2).ipynb)
 
 **Setup** (one-time, before first run):
 
@@ -96,19 +91,6 @@ See [SUMMARY.md](SUMMARY.md) for technical implementation details.
 
 ---
 
-## 📁 Repository Structure
-
-```
-brain-to-text-mamba-decoder/
-├── brain_to_text_colab.ipynb     # End-to-end inference pipeline (Colab)
-├── README.md                     # This file
-└── SUMMARY.md                    # Technical deep dive
-```
-
----
-
-## 🎯 Performance Benchmarks
-
 ### Competition Results
 
 | Metric | Score |
@@ -116,8 +98,6 @@ brain-to-text-mamba-decoder/
 | **Final Rank** | **7th / 463 teams** |
 | **Percentile** | **Top 1.5%** |
 | **Word Error Rate (WER)** | **0.02994** (2.9%) |
-
-
 
 ---
 
