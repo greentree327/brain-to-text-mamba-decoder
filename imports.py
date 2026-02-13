@@ -8,6 +8,7 @@
 import os
 import sys
 import time
+import subprocess
 
 try:
     from tqdm import tqdm
@@ -32,14 +33,19 @@ def _progress_iter():
         for _ in tqdm(_progress_steps, desc="imports.py", ncols=80):
             yield
 
+def _pip_install(*args):
+    cmd = [sys.executable, "-m", "pip", "install", "--progress-bar", "on"]
+    cmd.extend(args)
+    subprocess.run(cmd, check=True)
+
 # ============================================================================
 # 1. INSTALL REQUIRED PACKAGES (Colab only)
 # ============================================================================
 
 _progress = _progress_iter()
 next(_progress)
-os.system("pip install -q causal-conv1d>=1.2.0")
-os.system("pip install -q mamba-ssm")
+_pip_install("causal-conv1d>=1.2.0")
+_pip_install("mamba-ssm")
 
 # ============================================================================
 # 2. CORE ML & DATA PROCESSING
