@@ -107,8 +107,7 @@ tests/
 ├── test_models.py     # Model forward pass validation
 └── test_utils.py      # Utility function tests
 
-notebooks/
-└── inference_colab.ipynb  # End-to-end inference pipeline
+brain_to_text_colab.ipynb  # End-to-end inference pipeline
 ```
 
 ### Design Principles
@@ -136,7 +135,7 @@ notebooks/
 
 ### Running on Google Colab
 
-1. Open: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/greentree327/brain-to-text-mamba-decoder/blob/main/notebooks/inference_colab.ipynb)
+1. Open: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/greentree327/brain-to-text-mamba-decoder/blob/main/brain_to_text_colab.ipynb)
 2. Runtime → Change runtime type → **GPU (A100 recommended)**
 3. Set up Colab Secrets (one-time):
    - Click 🔑 icon (Secrets) in left sidebar

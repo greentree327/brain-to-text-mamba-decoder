@@ -67,13 +67,11 @@ else:
 
 ---
 
-## 🚀 Quick Start
-
-### Option 1: Google Colab (Recommended)
+## 🚀 Quick Start (Colab Only)
 
 Run the complete pipeline on Google Colab with zero local setup:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/greentree327/brain-to-text-mamba-decoder/blob/main/notebooks/inference_colab.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/greentree327/brain-to-text-mamba-decoder/blob/main/brain_to_text_colab.ipynb)
 
 **Setup** (one-time, before first run):
 
@@ -96,40 +94,13 @@ Run the complete pipeline on Google Colab with zero local setup:
 
 See [SUMMARY.md](SUMMARY.md) for technical implementation details.
 
-### Option 2: Local Installation
-
-```bash
-# Clone repository
-git clone https://github.com/greentree327/brain-to-text-mamba-decoder.git
-cd brain-to-text-mamba-decoder
-
-# Install Python dependencies
-pip install -r requirements.txt
-pip install -e .
-
-# Install mamba-ssm (Windows requires conda)
-conda install -c conda-forge mamba-ssm causal-conv1d
-```
-
 ---
 
 ## 📁 Repository Structure
 
 ```
 brain-to-text-mamba-decoder/
-├── src/                          # Core implementation
-│   ├── models.py                 # MambaDecoder, GRUDecoderBaseline
-│   ├── data_loader.py            # PyTorch Dataset for HDF5 neural data
-│   ├── data_sources.py           # Kaggle API dataset automation
-│   ├── decoding.py               # Beam search, ensemble methods
-│   └── utils.py                  # WER/CER metrics, preprocessing
-├── tests/                        # Unit tests (40+ test cases)
-│   ├── test_models.py            # Model forward pass validation
-│   └── test_utils.py             # Utility function tests
-├── notebooks/
-│   └── inference_colab.ipynb     # End-to-end inference pipeline
-├── requirements.txt              # Python dependencies
-├── setup.py                      # Package configuration
+├── brain_to_text_colab.ipynb     # End-to-end inference pipeline (Colab)
 ├── README.md                     # This file
 └── SUMMARY.md                    # Technical deep dive
 ```
@@ -156,12 +127,6 @@ brain-to-text-mamba-decoder/
 - **Technical Writeup**: [Medium Article](https://medium.com/@jackson3b04/7th-place-solution-mamba-gru-kenlm-with-code-brain-to-text-25-00f1c69dcd0d)
 - **Implementation Details**: [SUMMARY.md](SUMMARY.md)
 - **Original Dataset Paper**: [Willett et al., Nature 2023](https://www.nature.com/articles/s41586-023-06377-x)
-
----
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) for details
 
 ---
 
