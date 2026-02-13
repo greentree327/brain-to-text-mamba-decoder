@@ -87,25 +87,12 @@ Run the complete pipeline on Google Colab with zero local setup:
    - Runtime → Run all
    - Credentials load automatically from secrets
 
-See [SUMMARY.md](SUMMARY.md) for technical implementation details.
-
----
-
-### Competition Results
-
-| Metric | Score |
-|--------|-------|
-| **Final Rank** | **7th / 463 teams** |
-| **Percentile** | **Top 1.5%** |
-| **Word Error Rate (WER)** | **0.02994** (2.9%) |
-
 ---
 
 ## 🔗 Links
 
 - **Competition**: [Kaggle Brain-to-Text 2025](https://www.kaggle.com/competitions/brain-to-text-25/leaderboard)
-- **Technical Writeup**: [Medium Article](https://medium.com/@jackson3b04/7th-place-solution-mamba-gru-kenlm-with-code-brain-to-text-25-00f1c69dcd0d)
-- **Implementation Details**: [SUMMARY.md](SUMMARY.md)
+
 - **Original Dataset Paper**: [Willett et al., Nature 2023](https://www.nature.com/articles/s41586-023-06377-x)
 
 ---
