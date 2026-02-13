@@ -23,7 +23,7 @@ This repository contains the original submission notebook for the [Kaggle Brain-
 
 - **Original submission notebook** used for inference
 - **Colab-first workflow** with minimal setup
-- **Technical summary** in [SUMMARY.md](SUMMARY.md)
+- **Technical Writeup**: [Medium Article](https://medium.com/@jackson3b04/7th-place-solution-mamba-gru-kenlm-with-code-brain-to-text-25-00f1c69dcd0d)
 
 ---
 
